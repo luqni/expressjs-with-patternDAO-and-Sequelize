@@ -1,0 +1,6 @@
+urutan 
+
+-model
+-instance sequelize
+-dao
+-update contoller

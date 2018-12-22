@@ -10,3 +10,6 @@ sedangkan arrow function adalah fitur di ES6. Di ES6 sintaksnya sudah menggunaka
 -instance sequelize
 -dao
 -update controller
+
+
+sudo killall -9 node
