@@ -22,8 +22,8 @@ var customerRoute = require('./router/routes-customer');
 customerRoute(app);
 
 //router for Accounts
-// var accountRoute = require('./router/routes-account');
-// accountRoute(app);
+var accountRoute = require('./router/routes-account');
+accountRoute(app);
 
 //router for transaction
 var transactionRoute = require('./router/routes-transaction');

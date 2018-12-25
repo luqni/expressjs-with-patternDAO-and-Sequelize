@@ -1,5 +1,6 @@
 var response = require('../model/res');
-var transactionDao = require('../dao/transaction-dao');
+// var transactionDao = require('../dao/transaction-dao');
+var transactionDao = require('../dao/transaction-dao-sequelize');
 
 exports.transactions = function(req, res) {
     transactionDao.getAll(function (error, rows){

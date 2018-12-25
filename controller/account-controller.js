@@ -14,61 +14,61 @@ exports.accounts = function(req, res) {
         }
     });
 };
-// exports.getAccountrById = function(req, res) {
-//     accountDao.getById(req.params['id'], function(err, data){
-//         if(err){
-//             console.log('error call getById : '+err);
-//             response.err(err, res);
-//         } 
-//         response.ok(data, res);
-//     });
+exports.getAccountrById = function(req, res) {
+    accountDao.getById(req.params['id'], function(err, data){
+        if(err){
+            console.log('error call getById : '+err);
+            response.err(err, res);
+        } 
+        response.ok(data, res);
+    });
 
-// };
-// exports.insertAccount= function(req, res) {
-//     accountDao.insert(req.body, function(err, data){
-//         if(err){
-//             console.log('error call insert : '+err);
-//             response.err(err, res);
-//         } 
-//         response.ok('data inserted with id '+data.insertId, res);
-//     });
-// };
+};
+exports.insertAccount= function(req, res) {
+    accountDao.insert(req.body, function(err, data){
+        if(err){
+            console.log('error call insert : '+err);
+            response.err(err, res);
+        } 
+        response.ok('data inserted with id '+data.insertId, res);
+    });
+};
 
-// exports.updateAccount = function(req, res) {
-//     accountDao.getById(req.body.id, function(err, data){//check customer exists
-//         if(err){
-//             console.log('error call getById : '+err);
-//             response.err(err, res);
-//         } else if(data==null){
-//             response.datanotfound('customer not found', res);
-//         }else{
-//             //if exists, then continue update
-//             accountDao.update(req.body.id, req.body, function(err, data){
-//                 if(err){
-//                     console.log('error call update : '+err);
-//                     response.err(error, res);
-//                 } 
-//                 response.ok('updated data : '+ data.message, res);
-//             });
-//         }
-//     });
-// };
-// exports.del = function(req, res) {
-//     accountDao.getById(req.params['id'], function(err, data){//check customer exists
-//         if(err){
-//             console.log('error call getById : '+err);
-//             response.err(err, res);
-//         }  else if(data==null){
-//             response.datanotfound('customer not found', res);
-//         }else{
-//             //if exists, continue delete
-//             accountDao.del(req.params['id'], function(err, data){
-//                 if(err){
-//                     console.log('error call delete : '+err);
-//                     response.err(error, res);
-//                 } 
-//                 response.ok(data, res);
-//             });
-//         }
-//     });
-// };
+exports.updateAccount = function(req, res) {
+    accountDao.getById(req.body.id, function(err, data){//check customer exists
+        if(err){
+            console.log('error call getById : '+err);
+            response.err(err, res);
+        } else if(data==null){
+            response.datanotfound('customer not found', res);
+        }else{
+            //if exists, then continue update
+            accountDao.update(req.body.id, req.body, function(err, data){
+                if(err){
+                    console.log('error call update : '+err);
+                    response.err(error, res);
+                } 
+                response.ok('updated data : '+ data.message, res);
+            });
+        }
+    });
+};
+exports.del = function(req, res) {
+    accountDao.getById(req.params['id'], function(err, data){//check customer exists
+        if(err){
+            console.log('error call getById : '+err);
+            response.err(err, res);
+        }  else if(data==null){
+            response.datanotfound('customer not found', res);
+        }else{
+            //if exists, continue delete
+            accountDao.del(req.params['id'], function(err, data){
+                if(err){
+                    console.log('error call delete : '+err);
+                    response.err(error, res);
+                } 
+                response.ok(data, res);
+            });
+        }
+    });
+};
